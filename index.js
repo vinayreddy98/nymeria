@@ -49,34 +49,6 @@ app.get('/redirects', function(req,res){
     }
 });
 
-app.post('/upload', function(req,res){
-    /*if(Object.keys(req.files).length == 0){
-        res.send('No file uploaded');
-    }
-    else {
-        let uploadedFile = req.files.picture;
-        var dirc = '/albus/' + 'fg.jpg';
-        uploadedFile.mv(dirc, function(err){
-            if (err)
-               console.log("error occured");
-            res.send('file uploaded');
-        });
-    }*/
-    var filenam =  req.body.username;
-
-
-    req.files.picture.mv(filenam, function(err){
-         if (err){
-           res.send('file uploaded');
-         }
-           console.log('error occured');
-         else {
-             res.send('file uploaded');
-             console.log('file uploaded');
-         }
-    })
-});
-
 
 app.get('/logout', function(req,res){
     req.session.destroy(function(error){
