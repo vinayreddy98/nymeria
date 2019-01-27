@@ -55,12 +55,12 @@ app.post('/upload', function(req,res) {
 
   uploadPath = __dirname  + sampleFile.name;
 
-  //sampleFile.mv(uploadPath, function(err) {
-  //  if (err) {
-   //   return res.status(500).send(err);
-    //}
+  sampleFile.mv(uploadPath, function(err) {
+    if (err) {
+      return res.status(500).send(err);
+   }
 
-    res.send('hey there');
+     res.send('hey there');
   });
 });
 
