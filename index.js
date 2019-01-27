@@ -38,6 +38,10 @@ app.post('/login', function(req,res){
     console.log(session);
 });
 
+app.post('/upload', function(req,res) {
+      res.send('Its working');
+});
+
 app.get('/redirects', function(req,res){
     session = req.session;
     if(session.uniqueID ){
