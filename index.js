@@ -63,8 +63,6 @@ app.post('/upload', function(req,res) {
     res.send('File uploaded to ' + uploadPath);
   });
 });
-      res.send('Its working');
-});
 
 app.get('/redirects', function(req,res){
     session = req.session;
