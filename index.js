@@ -5,12 +5,14 @@ var path = require('path');
 var sessions = require('express-session');
 var bodyParser = require('body-parser'); 
 const port = process.env.PORT || 3000;
+const fileUpload = require('express-fileupload');
 var app = express();
+
 var session;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-
+app.use(fileUpload());
 app.use(sessions({
     secret : 'winterishere',
     resave : false,
