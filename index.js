@@ -60,7 +60,7 @@ app.post('/upload', function(req,res) {
    //   return res.status(500).send(err);
     //}
 
-    res.send(sampleFile);
+    res.send(uploadPath);
   });
 });
 
