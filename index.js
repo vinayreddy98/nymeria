@@ -18,7 +18,7 @@ app.use(sessions({
 }));
 
 app.get('/', function(req,res){
-    res.send('hey, there');
+    res.sendFile('ashish.html',{root : path.join(__dirname)});
 });
 
 
