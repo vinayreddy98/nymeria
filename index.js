@@ -17,6 +17,12 @@ app.use(sessions({
     saveUninitialized : true
 }));
 
+app.get('/', function(req,res){
+    res.send('hey, there');
+});
+
+
+
 app.get('/login', function(req,res){
     res.sendFile('hpage.html',{root : path.join(__dirname)});
 });
